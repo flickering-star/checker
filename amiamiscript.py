@@ -58,7 +58,7 @@ def amiami_search():
                         s_maker_id=97)
                 
                 # Get all items in the database for this search term
-                db_items = list(collection.find({}))
+                db_items = list(collection.find({"searchTerm": line}))
                 found_items = set()
                 
                 for item in results.items:
